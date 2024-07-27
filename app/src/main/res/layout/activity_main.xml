@@ -1,0 +1,99 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Background images for scrolling effect -->
+    <ImageView
+        android:id="@+id/background1"
+        android:layout_width="2000dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/background2"
+        android:layout_width="2000dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center" />
+
+    <!-- Pipes for the game -->
+    <ImageView
+        android:id="@+id/pipeTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/pipe"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/pipeBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/pipe"
+        android:scaleType="fitXY" />
+
+    <!-- Ground image fixed at the bottom -->
+    <ImageView
+        android:id="@+id/ground"
+        android:layout_width="2000dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/ground" />
+
+    <ImageView
+        android:id="@+id/bird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tutel"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="0dp" />
+
+    <!-- Score TextView -->
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="100sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:fontFamily="@font/flappy" />
+
+    <TextView
+        android:id="@+id/gameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GAME OVER!"
+        android:textSize="50sp"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/flappy" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESTART"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="600dp"
+        android:fontFamily="@font/flappy"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp"
+        android:backgroundTint="#FFD600" />
+</FrameLayout>
